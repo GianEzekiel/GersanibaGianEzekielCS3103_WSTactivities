@@ -1,0 +1,46 @@
+body {
+    background-color: #efe2dc;
+    font-family: Manrope, sans-serif;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+.box {
+    background-color: #ffffff;
+    box-sizing: content-box;
+    padding: 10px;
+    margin: 20px;
+    width: 350px;
+    height: 40%;
+    text-align: center;
+    box-shadow: 0 0 50px #ccc;
+    transition: transform .5s;
+}
+
+.box:hover {
+    -ms-transform: scale(1.5);
+    transform: scale(1.5); 
+}
+
+h2 {
+    padding: 15px;
+}
+
+
+@media (max-width: 970px) {
+    #container {
+        flex-direction: column;
+    }
+}
