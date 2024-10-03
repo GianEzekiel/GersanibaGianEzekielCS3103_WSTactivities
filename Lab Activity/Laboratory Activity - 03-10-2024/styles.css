@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Manrope, sans-serif;
+    color: #d1d9e3;
+
+}
+
+body {
+    background-image: url(/assets/background.jpg);
+    height: 450px;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: columm;
+    justify-content: center;
+    align-items: center;
+    height: 620px;
+    width: 80%;
+    background-color: rgba(7, 81, 216, .55);
+}
+
+.columns {
+    height: 530px;
+    width: 300px;
+    padding: 40px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.my_image {
+    height: 100px;
+    width: 147px;
+    border-radius: 15px;
+}
+
+.daily {
+    background-color: #0e1f37;
+}
+
+.vacation {
+    justify-content: center;
+}
+
+.places {
+    height: 100px;
+    width: 147px;
+    border-radius: 15px;
+}
