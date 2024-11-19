@@ -7,15 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h1>Word and Sentence Counter</h1>
-        <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
-        <div class="counts">
-            <p class="count">Words: <span id="word-count">0</span></p>
-            <p class="count">Sentences: <span id="sentence-count">0</span></p>
-        </div>
-    </div>
-
+        <form id="counter-form">
+            <label for="text-input" class="sr-only">Enter your text</label>
+            <textarea 
+                id="text-input" 
+                name="text-input" 
+                placeholder="Type or paste your text here..." 
+                aria-live="polite"
+                spellcheck="true"
+            ></textarea>
+        </form>
+        <section class="stats" aria-live="polite">
+            <div class="stat">
+                <span class="stat-label">Words</span>
+                <span class="stat-value" id="word-count">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Sentences</span>
+                <span class="stat-value" id="sentence-count">0</span>
+            </div>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

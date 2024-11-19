@@ -3,15 +3,14 @@ const wordCountElement = document.getElementById('word-count');
 const sentenceCountElement = document.getElementById('sentence-count');
 
 function countWordsAndSentences() {
-    const text = textInput.value.trim();
+    const text = textInput.value;
     
-    // Count words
-    const words = text.split(/\s+/).filter(word => word.length > 0);
+    // Count words (improved to handle various whitespace characters)
+    const words = text.trim().split(/\s+/).filter(word => word.length > 0);
     const wordCount = words.length;
 
-    // Count sentences
-    const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0);
-    const sentenceCount = sentences.length;
+    // Count sentences (improved to handle various sentence structures)
+    const sentenceCount = text.split(/[.!?]+(?=\s+|$)/).filter(sentence => sentence.trim().length > 0).length;
 
     // Update the display
     wordCountElement.textContent = wordCount;
@@ -21,5 +20,5 @@ function countWordsAndSentences() {
 // Add event listener for input changes
 textInput.addEventListener('input', countWordsAndSentences);
 
-// Initial count (in case there's some text already in the textarea)
+// Initial count
 countWordsAndSentences();
